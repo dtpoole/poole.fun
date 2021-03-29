@@ -7,7 +7,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
 <title>poole.fun</title>
 </head>
-<body style="padding: .5em;">
-    <h1>hi.</h1>
+<body onload="x()" style="padding: .5em;">
+    <h1 id="x"></h1>
+
+    <script>
+        function x() {
+            const z = document.title;
+            var text = '';
+            for (i = 1; i <= 300; i++) {
+                text += (( i % 3 === 0) ? '<b>' + z + '</b>' : z) + ' ';
+            }
+            document.querySelector('#x').innerHTML = text;
+        }
+    </script>
 </body>
 </html>
